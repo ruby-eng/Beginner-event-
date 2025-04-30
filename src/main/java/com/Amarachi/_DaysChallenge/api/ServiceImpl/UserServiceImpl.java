@@ -30,7 +30,7 @@ public class UserServiceImpl implements UserService {
         dto.setUsername(user.getUsername());
         dto.setBio(user.getBio());
         dto.setProfilePictureUrl(user.getProfilePictureUrl());
-        return dto;
+        return dto;g
     }
 
     @Override
