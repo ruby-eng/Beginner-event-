@@ -1,10 +1,7 @@
 package com.Amarachi._DaysChallenge.api.controllers;
 
-
-
 import com.Amarachi._DaysChallenge.api.Services.PostService;
 import com.Amarachi._DaysChallenge.api.dto.PostDto;
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,10 +9,14 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/posts")
-@RequiredArgsConstructor
 public class PostController {
 
     private final PostService postService;
+
+    // Manually defining the constructor for PostService injection
+    public PostController(PostService postService) {
+        this.postService = postService;
+    }
 
     @PostMapping
     public ResponseEntity<PostDto> createPost(@RequestBody PostDto postDto) {
@@ -43,4 +44,5 @@ public class PostController {
         return ResponseEntity.ok().build();
     }
 }
+
 

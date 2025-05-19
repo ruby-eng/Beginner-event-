@@ -2,7 +2,8 @@ package com.Amarachi._DaysChallenge.api.repository;
 
 
 
-import com.yourname.socialmediaapi.entities.Post;
+
+import com.Amarachi._DaysChallenge.api.entities.Post;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
