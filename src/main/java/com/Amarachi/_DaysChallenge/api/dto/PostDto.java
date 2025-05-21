@@ -8,7 +8,8 @@ public class PostDto {
     private String imageUrl;
     private LocalDateTime createdAt;
     private Long userId; // Who posted it
-
+    public PostDto() {
+    }
     // Constructor with id and content only (or other relevant fields if needed)
     public PostDto(Long id, String content, String imageUrl, String username) {
         this.id = id;
